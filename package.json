@@ -1,0 +1,25 @@
+{
+  "name": "ldes-benchmark",
+  "version": "1.0.0",
+  "description": "Benchmark of different LDES fragmentations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smessie/ldes-benchmark.git"
+  },
+  "author": "Ieben Smessaert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smessie/ldes-benchmark/issues"
+  },
+  "homepage": "https://github.com/smessie/ldes-benchmark#readme",
+  "devDependencies": {
+    "@rdfc/js-runner": "^1.0.0",
+    "@rdfc/replication-processor-ts": "^1.1.1",
+    "@rdfc/sds-processors-ts": "^1.2.7",
+    "ldes-harvester-processor-ts": "^1.0.0"
+  }
+}
