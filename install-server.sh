@@ -31,6 +31,10 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plug
 
 sudo usermod -aG docker $USER
 
+# Install screen
+sudo apt-get update
+sudo apt-get -y install screen
+
 # Get the datasets
 wget https://cloud.ilabt.imec.be/index.php/s/LYDMFHXrTW3MeQb/download -O data.zip
 unzip data.zip -d data
