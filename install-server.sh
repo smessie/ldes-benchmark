@@ -15,7 +15,7 @@ npm install
 
 # Add Docker's official GPG key:
 sudo apt-get update
-sudo apt-get install ca-certificates curl
+sudo apt-get -y install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
@@ -27,10 +27,16 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get -y install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 sudo usermod -aG docker $USER
 
 # Get the datasets
 wget https://cloud.ilabt.imec.be/index.php/s/LYDMFHXrTW3MeQb/download -O data.zip
 unzip data.zip -d data
+mv data/ldes-benchmark-data/* data
+rmdir data/ldes-benchmark-data
+
+# Get the local IPv4 address of the server
+LOCAL_IP=$(hostname -I | awk '{print $1}')
+echo "Server IP: $LOCAL_IP"
