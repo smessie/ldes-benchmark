@@ -4,7 +4,7 @@
 ENV_DIR_TELRAAM_REPLICATION="/users/iesmessa/ldes-benchmark/configs/telraam/replication"
 OUT_DIR_TELRAAM_REPLICATION="/groups/ilabt-imec-be/semic-ldes/ldes-benchmark-results/telraam/replication"
 
-for env_file in "$ENV_DIR_TELRAAM_REPLICATION"/*(1|2|5)c.env; do
+find "$ENV_DIR_TELRAAM_REPLICATION" -type f \( -name "*1c.env" -o -name "*2c.env" -o -name "*5c.env" \) | while read env_file; do
     base_name=$(basename "$env_file" .env)
 
     out_file="$OUT_DIR_TELRAAM_REPLICATION/${base_name}.json"
@@ -18,7 +18,7 @@ done
 ENV_DIR_TELRAAM_SYNCHRONIZATION="/users/iesmessa/ldes-benchmark/configs/telraam/synchronization"
 OUT_DIR_TELRAAM_SYNCHRONIZATION="/groups/ilabt-imec-be/semic-ldes/ldes-benchmark-results/telraam/synchronization"
 
-for env_file in "$ENV_DIR_TELRAAM_SYNCHRONIZATION"/*(1|2)c.env; do
+find "$ENV_DIR_TELRAAM_SYNCHRONIZATION" -type f \( -name "*1c.env" -o -name "*2c.env" \) | while read env_file; do
     base_name=$(basename "$env_file" .env)
 
     out_file="$OUT_DIR_TELRAAM_SYNCHRONIZATION/${base_name}.json"
