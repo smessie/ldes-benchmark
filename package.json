@@ -21,7 +21,7 @@
     "@rdfc/replication-processor-ts": "^1.1.1",
     "@rdfc/sds-processors-ts": "^1.2.7",
     "ldes-evaluation-runner-client": "^1.1.0",
-    "ldes-evaluation-runner-orchestrator": "^1.1.0",
+    "ldes-evaluation-runner-orchestrator": "^1.1.1",
     "ldes-harvester-processor-ts": "^1.0.0"
   }
 }
