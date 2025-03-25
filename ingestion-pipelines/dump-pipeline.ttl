@@ -108,18 +108,13 @@
           js:metadataOutput <metadata/bucketized/writer>;
       ];
     js:bucketizeStrategy ( [
-                               a tree:PageFragmentation;
+                               a tree:DumpFragmentation;
                                tree:timestampPath [
                                                       a rdfl:EnvVariable;
                                                       rdfl:envDefault prov:generatedAtTime;
                                                       rdfl:envKey "TIMESTAMP_PATH";
                                                       rdfl:datatype xsd:iri
                                                   ];
-                               tree:pageSize [
-                                                 a rdfl:EnvVariable;
-                                                 rdfl:envDefault 1000;
-                                                 rdfl:envKey "PAGE_SIZE"
-                                             ];
                            ]);
     js:outputStreamId ex:BenchmarkStream.
 

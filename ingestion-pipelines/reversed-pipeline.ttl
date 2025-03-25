@@ -109,6 +109,12 @@
       ];
     js:bucketizeStrategy ( [
                                a tree:ReversedPageFragmentation;
+                               tree:timestampPath [
+                                                      a rdfl:EnvVariable;
+                                                      rdfl:envDefault prov:generatedAtTime;
+                                                      rdfl:envKey "TIMESTAMP_PATH";
+                                                      rdfl:datatype xsd:iri
+                                                  ];
                                tree:pageSize [
                                                  a rdfl:EnvVariable;
                                                  rdfl:envDefault 1000;
